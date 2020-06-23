@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  width: 100%;
+}
+
+.pagination-list {
+  padding-top: 1em;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: center;
+}
+
+.pagination-list__link {
+  padding: 0.5em 1em;
+  border: 1px solid rgb(128, 128, 128);
+  color: black;
+  margin-right: 1em;
+}
