@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "srv": "nodemon srv/index.js",
+    "serve": "cd srv && nodemon index.js",
     "client": "cd client && npm run start",
-    "dev": "npm run srv & cd client && npm run start",
-    "start": "node srv/index.js"
+    "dev": "npm run serve & cd client && npm run start",
+    "start": "cd serve && node index.js"
   },
   "author": "",
   "license": "ISC",

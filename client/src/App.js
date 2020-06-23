@@ -29,6 +29,7 @@ function App() {
   const onFilter = (value, condition, query) => {
     let newItems = items.slice();
     let typedQuery = value === "name" ? query.toLowerCase() : parseInt(query);
+
     if (query.trim().length !== 0) {
       switch (condition) {
         case ">":
@@ -37,13 +38,10 @@ function App() {
         case "<":
           newItems = newItems.filter((item) => item[value] <= typedQuery);
           break;
-        case "=" && value === "name":
+        case "=":
           newItems = newItems.filter(
             (item) => item[value].toLowerCase() === typedQuery
           );
-          break;
-        case "=":
-          newItems = newItems.filter((item) => item[value] === typedQuery);
           break;
         case "includes":
           newItems = newItems.filter((item) =>
